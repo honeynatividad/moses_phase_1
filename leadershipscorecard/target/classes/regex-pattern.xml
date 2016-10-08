@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans>
+    <bean id="regexPatternHandler" class="com.denatravel.util.RegexPatternHandler">
+        <property name="regexpattern">
+            <map>
+                <entry>
+                    <key>
+                        <value>username</value>	
+                    </key>
+                   <value>^[\w]{1,20}$</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>name</value>	
+                    </key>
+                   <value>^[\,\'\/\-\w\s\d\ñ\Ñ\.]{1,100}$</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>email</value>	
+                    </key>
+                   <value>^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$</value>
+                </entry>
+                 <entry>
+                    <key>
+                        <value>telephone</value>	
+                    </key>
+                   <value>^[\-\(\)\+\s\d]{1,20}$</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>password</value>	
+                    </key>
+                   <value>^[\S]*[A-Z]+[\S]*[0-9|\W]+[\S]*$|^[\S]*[0-9|\W]+[\S]*[A-Z]+[\S]*$|^[\S]*[0-9|\W]+[A-Z]+[\S]*$|^[\S]*[A-Z]+[0-9|\W]+[\S]*$</value>
+                </entry>   
+                <entry>
+                    <key>
+                        <value>numeric</value>	
+                    </key>
+                   <value>^[\d]{1,8}$</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>
